@@ -1,20 +1,29 @@
 Hooks.on('renderActorSheet5eCharacter', (sheet, html) => {
   html.find('.denomination.ep').remove();
   html.find('[name="data.currency.ep"]').remove();
+  html.find('.denomination.pp').remove();
+  html.find('[name="data.currency.pp"]').remove();
 });
 
 Hooks.on('renderTidy5eSheet', (sheet, html) => {
     html.find('.denomination.ep').parent().remove();
     html.find('.denomination.ep').remove();
     html.find('[name="data.currency.ep"]').remove();
+    html.find('.denomination.pp').parent().remove();
+    html.find('.denomination.pp').remove();
+    html.find('[name="data.currency.pp"]').remove();
 });
 Hooks.on('renderDNDBeyondCharacterSheet5e', (sheet, html) => {
   html.find('.denomination.ep').remove();
   html.find('[name="data.currency.ep"]').remove();
+  html.find('.denomination.pp').remove();
+  html.find('[name="data.currency.pp"]').remove();
 });
 Hooks.on('renderAlt5eSheet', (sheet, html) => {
   html.find('.denomination.ep').remove();
   html.find('[name="data.currency.ep"]').remove();
+  html.find('.denomination.pp').remove();
+  html.find('[name="data.currency.pp"]').remove();
 });
 
 Hooks.once('ready', () => {
@@ -26,9 +35,8 @@ Hooks.once('ready', () => {
     const curr = duplicate(this.actor.data.data.currency);
     console.log(curr);
     const convert = {
-      cp: {into: "sp", each: 10},
-      sp: {into: "gp", each: 100},
-      gp: {into: "pp", each: 100}
+      cp: {into: "sp", each: 100},
+      sp: {into: "gp", each: 100}
     };
     for ( let [c, t] of Object.entries(convert) ) {
       let change = Math.floor(curr[c] / t.each);
