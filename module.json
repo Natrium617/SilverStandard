@@ -11,9 +11,9 @@
   "esmodules": [],
   "packs": [],
   "url": "https://github.com/Sparkasaurusmex/SilverStandard/",
-  "manifest": "https://raw.githubusercontent.com/Sparkasaurusmex/SilverStandard/master/module.json",
-  "download": "https://github.com/Sparkasaurusmex/SilverStandard/releases/download/0.1/SilverStandard.zip",
+  "manifest": "https://raw.githubusercontent.com/Natrium617/SilverStandard/master/module.json",
+  "download": "https://github.com/Natrium617/SilverStandard/releases/download/0.1/SilverStandardWoW.zip",
   "minimumCoreVersion": "0.5.5",
-  "compatibleCoreVersion": "0.6.6"
+  "compatibleCoreVersion": "0.8.9"
 
 }
